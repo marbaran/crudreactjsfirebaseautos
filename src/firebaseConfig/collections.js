@@ -1,3 +1,3 @@
 export const dbCollections = {
-    Autos: "autos",
+    Autos: "auto",
 };

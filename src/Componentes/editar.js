@@ -81,7 +81,7 @@ const Editar = () => {
     //7 estructura para mostrar
 
   return (
-    <div className='container'>
+    <div className='container bg-info'>
         <div className='row'>
              <div className='col'>
 
@@ -121,7 +121,7 @@ const Editar = () => {
                 />
                 </div>
 
-                <button type="submit" className='btn btn-info btn-lg mt-3'>GUARDAR</button>
+                <button type="submit" className='btn btn-success btn-lg mt-3'>GUARDAR</button>
                 <Link to="/" className="btn btn-warning btn-lg mt-3">REGRESAR</Link>
              
              </form>

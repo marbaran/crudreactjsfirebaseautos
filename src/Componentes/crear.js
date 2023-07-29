@@ -34,7 +34,7 @@ const Crearauto = () => {
       //5 mostrar al auto el form
    
     return (
-      <div className='container'>
+      <div className='container bg-info'>
           <div className='row'>
                <div className='col '>
   
@@ -46,7 +46,7 @@ const Crearauto = () => {
                       <input 
                           value={marca}
                           type="text"
-                          className='form-control w-50 m-auto '
+                          className='form-control w-50 m-auto'
                           onChange={(e)=>setMarca(e.target.value)}
                       />
                   </div>
