@@ -13,6 +13,7 @@ const Crearauto = () => {
       const [marca, setMarca] = useState("");
       const [modelo, setModelo] = useState("");
       const [cotizacion, setCotizacion] = useState();
+      const [inventario, setInventario] = useState();
       const navigate = useNavigate();
   
       //2 referenciamos la bd
@@ -26,7 +27,7 @@ const Crearauto = () => {
   
       const nuevo = async (e)=>{
           e.preventDefault();
-          await addDoc(autosCollection, {marca: marca, modelo: modelo, cotizacion: cotizacion});
+          await addDoc(autosCollection, {marca: marca, modelo: modelo, cotizacion: cotizacion, inventario: inventario});
          
           navigate("/");
       }
@@ -70,7 +71,16 @@ const Crearauto = () => {
                       onChange={(e)=>setCotizacion(e.target.value)}
                   />
                   </div>
-  
+
+                  <div className='mb-4'>
+                  <label className='form-label h3 '>INVENTARIO:</label>
+                  <input 
+                      value={inventario}
+                      type="text"
+                      className='form-control w-50 m-auto'
+                      onChange={(e)=>setInventario(e.target.value)}
+                  />
+                  </div>  
                   <button type="submit" className='btn btn-success btn-lg mt-3'>AGREGAR</button>
                   <Link to="/" className="btn btn-warning btn-lg mt-3">REGRESAR</Link>
                </form>

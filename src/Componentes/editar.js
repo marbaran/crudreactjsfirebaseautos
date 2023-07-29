@@ -10,7 +10,8 @@ const Editar = () => {
     const [form, setForm] = useState({
         marca: "",
         modelo:"",
-        cotizacion:""
+        cotizacion:"",
+        inventario:""
     });
 
     const navigate = useNavigate();
@@ -47,7 +48,8 @@ const Editar = () => {
         const data = {
             marca: form.marca,
             modelo: form.modelo,
-            cotizacion: form.cotizacion
+            cotizacion: form.cotizacion,
+            inventario: form.inventario
         };
         await updateDoc(auto, data);
      //   alertaGuardado();
@@ -64,7 +66,8 @@ const Editar = () => {
             setForm({
                 marca: auto.data().marca,
                 modelo: auto.data().modelo,
-                cotizacion: auto.data().cotizacion 
+                cotizacion: auto.data().cotizacion,
+                inventario: auto.data().inventario 
             });
         }
         else{
@@ -121,6 +124,16 @@ const Editar = () => {
                 />
                 </div>
 
+                <div className='mb-3'>
+                <label className='form-label h3 '>INVENTARIO:</label>
+                <input 
+                    name="inventario"
+                    value={form.inventario}
+                    type="text"
+                    className='form-control w-50 m-auto'
+                    onChange={cambio}
+                />
+                </div>
                 <button type="submit" className='btn btn-success btn-lg mt-3'>GUARDAR</button>
                 <Link to="/" className="btn btn-warning btn-lg mt-3">REGRESAR</Link>
              

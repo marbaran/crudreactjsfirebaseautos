@@ -58,6 +58,7 @@ return(
                         <th>MARCA</th>
                         <th>MODELO</th>
                         <th>COTIZACIÓN</th>
+                        <th>INVENTARIO</th>
                         <th>MODIFICACIONES</th>
                     </tr>
                 </thead>
@@ -67,6 +68,7 @@ return(
                             <td key={car.marca} >{car.marca || ''}</td>
                             <td key={car.modelo} >{car.modelo || ''}</td>
                             <td key={car.cotizacion} >{car.cotizacion || ''} </td>
+                            <td key={car.inventario} >{car.inventario || ''} </td>
                             <td>
                             <Link to={`/editarauto/${car.id}`} className="material-icons">edit</Link>
                             <button onClick={()=>{deleteAuto(car.id)}} className="material-icons">delete</button>
